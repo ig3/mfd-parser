@@ -30,10 +30,21 @@ function toData (data, part) {
     .match(/name="(.+)"/)[1];
   }, T_EMPTY_STR);
 
-  data[key] = {
-    headers,
-    value: typeof body === 'undefined' ? '' : body.trim()
-  };
+  if(data[key]) {
+    if (typeof data[key].value === 'string') {
+      data[key].value = [
+        data[key].value,
+        (typeof body === 'undefined' ? '' : body.trim())
+      ];
+    } else {
+      data[key].value.push(typeof body === 'undefined' ? '' : body.trim());
+    }
+  } else {
+    data[key] = {
+      headers,
+      value: typeof body === 'undefined' ? '' : body.trim()
+    };
+  }
 
   return data;
 }
