@@ -56,7 +56,86 @@ tap.test('parse crlf', (t) => {
 tap.test('parse agiloft request', (t) => {
   const data = parse(fs.readFileSync(path.resolve(__dirname, 'agiloft.txt'), 'utf8'));
 
-  console.log('data ', data);
-  t.strictSame(data.field_a.value, [ 'a', 'b', 'c' ]);
+  t.strictSame(
+    data,
+    {
+      "$lang":{
+        "headers":[
+          {
+            "name":"Content-Disposition",
+            "value":"form-data; name=\"$lang\""
+          }
+        ],
+        "value":"en"
+      },
+      "$KB":{
+        "headers":[
+          {
+            "name":"Content-Disposition",
+            "value":"form-data; name=\"$KB\""
+          }
+        ],
+        "value":"TestKB"
+      },
+      "$login":{
+        "headers":[
+          {
+            "name":"Content-Disposition",
+            "value":"form-data; name=\"$login\""
+          }
+        ],
+        "value":"login"
+      },
+      "$password":{
+        "headers":[
+          {
+            "name":"Content-Disposition",
+            "value":"form-data; name=\"$password\""
+          }
+        ],
+        "value":"password"
+      },
+      "$table":{
+        "headers":[
+          {
+            "name":"Content-Disposition",
+            "value":"form-data; name=\"$table\""
+          }
+        ],
+        "value":"test_table"
+      },
+      "field_a":{
+        "headers":[
+          {
+            "name":"Content-Disposition",
+            "value":"form-data; name=\"field_a\""
+          }
+        ],
+        "value":"a"
+      },
+      "field_b":{
+        "headers":[
+          {
+            "name":"Content-Disposition",
+            "value":"form-data; name=\"field_b\""
+          }
+        ],
+        "value":["a","b","c"]
+      },
+      "field_c":{
+        "headers":[
+          {
+            "name":"Content-Disposition",
+            "value":"form-data; name=\"field_c\"; filename=\"test.txt\""
+          },
+          {
+            "name":"Content-Type",
+            "value":"text/plain"
+          }
+        ],
+        "value":"This is a test file"
+      }
+    }
+  );
   t.end();
 });
