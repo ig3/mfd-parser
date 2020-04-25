@@ -52,3 +52,11 @@ tap.test('parse crlf', (t) => {
 
   t.end();
 });
+
+tap.test('parse agiloft request', (t) => {
+  const data = parse(fs.readFileSync(path.resolve(__dirname, 'agiloft.txt'), 'utf8'));
+
+  console.log('data ', data);
+  t.strictSame(data.field_a.value, [ 'a', 'b', 'c' ]);
+  t.end();
+});

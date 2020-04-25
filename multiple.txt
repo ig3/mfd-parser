@@ -1,0 +1,33 @@
+body  --zYzZY
+Content-Disposition: form-data; name="$lang"
+
+en
+--zYzZY
+Content-Disposition: form-data; name="$KB"
+
+TestKB
+--zYzZY
+Content-Disposition: form-data; name="$login"
+
+login
+--zYzZY
+Content-Disposition: form-data; name="$password"
+
+password
+--zYzZY
+Content-Disposition: form-data; name="$table"
+
+test_table
+--zYzZY
+Content-Disposition: form-data; name="field_a"
+
+a
+--zYzZY
+Content-Disposition: form-data; name="field_a"
+
+b
+--zYzZY
+Content-Disposition: form-data; name="field_a"
+
+c
+--zYzZY--
