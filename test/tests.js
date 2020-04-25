@@ -7,6 +7,7 @@ const path = require('path');
 
 tap.test('parse', (t) => {
   const data = parse(fs.readFileSync(path.resolve(__dirname, 'fixture-lf.txt'), 'utf8'));
+  console.log('data ', data);
 
   t.test('should parse each part headers', (t) => {
     t.strictSame(data.name.headers, [
@@ -31,6 +32,7 @@ tap.test('parse', (t) => {
 
 tap.test('parse crlf', (t) => {
   const data = parse(fs.readFileSync(path.resolve(__dirname, 'fixture-crlf.txt'), 'utf8'));
+  console.log('data ', data);
 
   t.test('should parse each part headers', (t) => {
     t.strictSame(data.name.headers, [

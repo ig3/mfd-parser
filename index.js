@@ -11,6 +11,7 @@ exports.parse = function parse (raw, boundary = null) {
 
   return raw
   .split(boundary)
+  .slice(1,-1)
   .filter(empty)
   .map(part)
   .reduce(toData, {});
