@@ -15,3 +15,10 @@ value, this will be an array of strings.
 npm install mfd-parser
 ```
 
+## Provenance
+
+This is a fork of
+[multisolutions/multipart-parser](https://github.com/multisolution/multipart-parser)
+by Leo Cavalcante and Dannylo Dangel. This library was selected because it
+is simple and has no dependencies, and has proven adequate (with a few
+modifications) for parsing Agiloft REST service requests.
