@@ -11,10 +11,13 @@
   "author": "Ian Goodacre",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "eslint-entrain": "^1.0.4",
-    "tap": "^14.10.7"
+    "eslint-config-entrain": "^2.0.2",
+    "tap": "^15.0.9"
+  },
+  "eslintConfig": {
+    "extends": "entrain"
   },
   "scripts": {
-    "test": "eslint-entrain && tap"
+    "test": "eslint . && tap"
   }
 }

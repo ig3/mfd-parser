@@ -11,7 +11,7 @@ exports.parse = function parse (raw, boundary = null) {
 
   return raw
   .split(boundary)
-  .slice(1,-1)
+  .slice(1, -1)
   .filter(empty)
   .map(part)
   .reduce(toData, {});
@@ -30,7 +30,7 @@ function toData (data, part) {
     .match(/name="(.+)"/)[1];
   }, T_EMPTY_STR);
 
-  if(data[key]) {
+  if (data[key]) {
     if (typeof data[key].value === 'string') {
       data[key].value = [
         data[key].value,

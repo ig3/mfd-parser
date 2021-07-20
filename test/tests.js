@@ -59,81 +59,81 @@ tap.test('parse agiloft request', (t) => {
   t.strictSame(
     data,
     {
-      "$lang":{
-        "headers":[
+      $lang: {
+        headers: [
           {
-            "name":"Content-Disposition",
-            "value":"form-data; name=\"$lang\""
+            name: 'Content-Disposition',
+            value: 'form-data; name="$lang"'
           }
         ],
-        "value":"en"
+        value: 'en'
       },
-      "$KB":{
-        "headers":[
+      $KB: {
+        headers: [
           {
-            "name":"Content-Disposition",
-            "value":"form-data; name=\"$KB\""
+            name: 'Content-Disposition',
+            value: 'form-data; name="$KB"'
           }
         ],
-        "value":"TestKB"
+        value: 'TestKB'
       },
-      "$login":{
-        "headers":[
+      $login: {
+        headers: [
           {
-            "name":"Content-Disposition",
-            "value":"form-data; name=\"$login\""
+            name: 'Content-Disposition',
+            value: 'form-data; name="$login"'
           }
         ],
-        "value":"login"
+        value: 'login'
       },
-      "$password":{
-        "headers":[
+      $password: {
+        headers: [
           {
-            "name":"Content-Disposition",
-            "value":"form-data; name=\"$password\""
+            name: 'Content-Disposition',
+            value: 'form-data; name="$password"'
           }
         ],
-        "value":"password"
+        value: 'password'
       },
-      "$table":{
-        "headers":[
+      $table: {
+        headers: [
           {
-            "name":"Content-Disposition",
-            "value":"form-data; name=\"$table\""
+            name: 'Content-Disposition',
+            value: 'form-data; name="$table"'
           }
         ],
-        "value":"test_table"
+        value: 'test_table'
       },
-      "field_a":{
-        "headers":[
+      field_a: {
+        headers: [
           {
-            "name":"Content-Disposition",
-            "value":"form-data; name=\"field_a\""
+            name: 'Content-Disposition',
+            value: 'form-data; name="field_a"'
           }
         ],
-        "value":"a"
+        value: 'a'
       },
-      "field_b":{
-        "headers":[
+      field_b: {
+        headers: [
           {
-            "name":"Content-Disposition",
-            "value":"form-data; name=\"field_b\""
+            name: 'Content-Disposition',
+            value: 'form-data; name="field_b"'
           }
         ],
-        "value":["a","b","c"]
+        value: ['a', 'b', 'c']
       },
-      "field_c":{
-        "headers":[
+      field_c: {
+        headers: [
           {
-            "name":"Content-Disposition",
-            "value":"form-data; name=\"field_c\"; filename=\"test.txt\""
+            name: 'Content-Disposition',
+            value: 'form-data; name="field_c"; filename="test.txt"'
           },
           {
-            "name":"Content-Type",
-            "value":"text/plain"
+            name: 'Content-Type',
+            value: 'text/plain'
           }
         ],
-        "value":"This is a test file"
+        value: 'This is a test file'
       }
     }
   );
