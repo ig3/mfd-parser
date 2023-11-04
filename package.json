@@ -1,5 +1,5 @@
 {
-  "name": "mfd-parser",
+  "name": "@ige/mfd-parser",
   "version": "1.0.0",
   "description": "Simple multipart/form-data parser",
   "keywords": [

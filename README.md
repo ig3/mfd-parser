@@ -1,4 +1,4 @@
-# mfd-parser
+# @ige/mfd-parser
 
 This is a parser for multipart/form-data messages.
 
@@ -12,7 +12,14 @@ value, this will be an array of strings.
 ## Installation
 
 ```
-npm install mfd-parser
+npm install @ig3/mfd-parser
+```
+
+## Usage
+
+```
+const mfd = require('@ig3/mfd-parser');
+const params = mfd.parse(multipartFormData);
 ```
 
 ## Provenance
