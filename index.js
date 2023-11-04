@@ -41,7 +41,7 @@ function toData (data, part) {
     }
   } else {
     data[key] = {
-      headers,
+      headers: headers,
       value: typeof body === 'undefined' ? '' : body.trim()
     };
   }

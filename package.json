@@ -11,13 +11,15 @@
   "author": "Ian Goodacre",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "eslint-config-entrain": "^2.0.2",
-    "tap": "^15.0.9"
+    "@ig3/eslint-config-entrain": "^3.0.1",
+    "c8": "^8.0.1",
+    "multi-tape": "^1.7.0",
+    "tape": "^5.7.2"
   },
   "eslintConfig": {
-    "extends": "entrain"
+    "extends": "@ig3/eslint-config-entrain"
   },
   "scripts": {
-    "test": "eslint . && tap"
+    "test": "eslint . && c8 multi-tape test/*.js"
   }
 }

@@ -1,19 +1,19 @@
 'use strict';
 
-const tap = require('tap');
+const t = require('tape');
 const { parse } = require('../index');
 const fs = require('fs');
 const path = require('path');
 
-tap.test('parse', (t) => {
+t.test('parse', (t) => {
   const data = parse(fs.readFileSync(path.resolve(__dirname, 'fixture-lf.txt'), 'utf8'));
 
   t.test('should parse each part headers', (t) => {
-    t.strictSame(data.name.headers, [
+    t.deepEqual(data.name.headers, [
       { name: 'Content-Disposition', value: 'form-data; name="name"' }
     ]);
 
-    t.strictSame(data.key.headers, [
+    t.deepEqual(data.key.headers, [
       { name: 'Content-Disposition', value: 'form-data; name="key"' }
     ]);
 
@@ -29,15 +29,15 @@ tap.test('parse', (t) => {
   t.end();
 });
 
-tap.test('parse crlf', (t) => {
+t.test('parse crlf', (t) => {
   const data = parse(fs.readFileSync(path.resolve(__dirname, 'fixture-crlf.txt'), 'utf8'));
 
   t.test('should parse each part headers', (t) => {
-    t.strictSame(data.name.headers, [
+    t.deepEqual(data.name.headers, [
       { name: 'Content-Disposition', value: 'form-data; name="name"' }
     ]);
 
-    t.strictSame(data.key.headers, [
+    t.deepEqual(data.key.headers, [
       { name: 'Content-Disposition', value: 'form-data; name="key"' }
     ]);
 
@@ -53,10 +53,10 @@ tap.test('parse crlf', (t) => {
   t.end();
 });
 
-tap.test('parse agiloft request', (t) => {
+t.test('parse agiloft request', (t) => {
   const data = parse(fs.readFileSync(path.resolve(__dirname, 'agiloft.txt'), 'utf8'));
 
-  t.strictSame(
+  t.deepEqual(
     data,
     {
       $lang: {
