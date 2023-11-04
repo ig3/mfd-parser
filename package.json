@@ -7,7 +7,7 @@
     "parser"
   ],
   "main": "index.js",
-  "repository": "git@git.entrain.nz",
+  "repository": "git@github.com/ig3/mfd-parser",
   "author": "Ian Goodacre",
   "license": "BSD-3-Clause",
   "devDependencies": {
