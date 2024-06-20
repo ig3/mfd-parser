@@ -34,7 +34,7 @@ function toData (data, part) {
     if (typeof data[key].value === 'string') {
       data[key].value = [
         data[key].value,
-        (typeof body === 'undefined' ? '' : body.trim())
+        (typeof body === 'undefined' ? '' : body.trim()),
       ];
     } else {
       data[key].value.push(typeof body === 'undefined' ? '' : body.trim());
@@ -42,7 +42,7 @@ function toData (data, part) {
   } else {
     data[key] = {
       headers: headers,
-      value: typeof body === 'undefined' ? '' : body.trim()
+      value: typeof body === 'undefined' ? '' : body.trim(),
     };
   }
 

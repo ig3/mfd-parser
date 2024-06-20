@@ -10,11 +10,11 @@ t.test('parse', (t) => {
 
   t.test('should parse each part headers', (t) => {
     t.deepEqual(data.name.headers, [
-      { name: 'Content-Disposition', value: 'form-data; name="name"' }
+      { name: 'Content-Disposition', value: 'form-data; name="name"' },
     ]);
 
     t.deepEqual(data.key.headers, [
-      { name: 'Content-Disposition', value: 'form-data; name="key"' }
+      { name: 'Content-Disposition', value: 'form-data; name="key"' },
     ]);
 
     t.end();
@@ -34,11 +34,11 @@ t.test('parse crlf', (t) => {
 
   t.test('should parse each part headers', (t) => {
     t.deepEqual(data.name.headers, [
-      { name: 'Content-Disposition', value: 'form-data; name="name"' }
+      { name: 'Content-Disposition', value: 'form-data; name="name"' },
     ]);
 
     t.deepEqual(data.key.headers, [
-      { name: 'Content-Disposition', value: 'form-data; name="key"' }
+      { name: 'Content-Disposition', value: 'form-data; name="key"' },
     ]);
 
     t.end();
@@ -63,78 +63,78 @@ t.test('parse agiloft request', (t) => {
         headers: [
           {
             name: 'Content-Disposition',
-            value: 'form-data; name="$lang"'
-          }
+            value: 'form-data; name="$lang"',
+          },
         ],
-        value: 'en'
+        value: 'en',
       },
       $KB: {
         headers: [
           {
             name: 'Content-Disposition',
-            value: 'form-data; name="$KB"'
-          }
+            value: 'form-data; name="$KB"',
+          },
         ],
-        value: 'TestKB'
+        value: 'TestKB',
       },
       $login: {
         headers: [
           {
             name: 'Content-Disposition',
-            value: 'form-data; name="$login"'
-          }
+            value: 'form-data; name="$login"',
+          },
         ],
-        value: 'login'
+        value: 'login',
       },
       $password: {
         headers: [
           {
             name: 'Content-Disposition',
-            value: 'form-data; name="$password"'
-          }
+            value: 'form-data; name="$password"',
+          },
         ],
-        value: 'password'
+        value: 'password',
       },
       $table: {
         headers: [
           {
             name: 'Content-Disposition',
-            value: 'form-data; name="$table"'
-          }
+            value: 'form-data; name="$table"',
+          },
         ],
-        value: 'test_table'
+        value: 'test_table',
       },
       field_a: {
         headers: [
           {
             name: 'Content-Disposition',
-            value: 'form-data; name="field_a"'
-          }
+            value: 'form-data; name="field_a"',
+          },
         ],
-        value: 'a'
+        value: 'a',
       },
       field_b: {
         headers: [
           {
             name: 'Content-Disposition',
-            value: 'form-data; name="field_b"'
-          }
+            value: 'form-data; name="field_b"',
+          },
         ],
-        value: ['a', 'b', 'c']
+        value: ['a', 'b', 'c'],
       },
       field_c: {
         headers: [
           {
             name: 'Content-Disposition',
-            value: 'form-data; name="field_c"; filename="test.txt"'
+            value: 'form-data; name="field_c"; filename="test.txt"',
           },
           {
             name: 'Content-Type',
-            value: 'text/plain'
-          }
+            value: 'text/plain',
+          },
         ],
-        value: 'This is a test file'
-      }
+        value: 'This is a test file',
+      },
     }
   );
   t.end();
