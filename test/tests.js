@@ -1,6 +1,6 @@
 'use strict';
 
-const t = require('tape');
+const t = require('@ig3/test');
 const { parse } = require('../index');
 const fs = require('fs');
 const path = require('path');

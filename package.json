@@ -12,9 +12,9 @@
   "license": "BSD-3-Clause",
   "devDependencies": {
     "@ig3/eslint-config-entrain": "^4.0.2",
+    "@ig3/test": "^0.0.8",
     "c8": "^10.1.2",
-    "multi-tape": "^1.7.0",
-    "tape": "^5.8.1"
+    "multi-tape": "^1.7.0"
   },
   "scripts": {
     "test": "eslint . && c8 multi-tape test/*.js"
